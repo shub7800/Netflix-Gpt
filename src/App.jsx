@@ -1,13 +1,11 @@
-import './App.css'
-
+import Body from "./components/Body";
 
 const App = () => {
   return (
-    <div className='text-5xl'>
-      hello shubham
+    <div>
+      <Body />
     </div>
-  )
-}
- 
-export default App
+  );
+};
 
+export default App;
