@@ -2,7 +2,9 @@
 
 - Create React App
 - Configured TailwindCSS
-- 
+- Header
+- login form
+- sign up form 
 
 # Features
 - Login/Sign Up
