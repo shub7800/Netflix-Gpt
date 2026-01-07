@@ -11,7 +11,7 @@
 - Browse (after authentication)
  - Header
  - Main Movie
-   - Taile r in Background
+   - Tailer in Background
    - Title & Description
    - MovieSuggestions
      - MovieLists * N
