@@ -2,6 +2,9 @@ import React, { useRef, useState } from "react";
 import Header from "./Header";
 import bgimg from "../assets/bg.jpg";
 import { checkValidDate } from "../utils/validate.js";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../utils/firebase.js";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -10,22 +13,61 @@ const Login = () => {
 
   const email = useRef(null);
   const password = useRef(null);
-  const name= useRef(null);
+  const name = useRef(null);
 
   const handleButtonClick = () => {
-  const message = checkValidDate({
-    email: email.current.value,
-    password: password.current.value,
-    name: isSignInForm ? null : name.current.value,
-  });
+    const message = checkValidDate({
+      email: email.current.value,
+      password: password.current.value,
+      name: isSignInForm ? null : name.current.value,
+    });
 
-  setErrorMessage(message);
+    setErrorMessage(message);
 
-  if(message) return;
-  
-  //sign / sign up logic
-  
-};
+    if (message) return;
+
+    //sign / sign up logic
+    if (!isSignInForm) {
+      //sign up logic
+      createUserWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          // Signed up
+          const user = userCredential.user;
+          console.log(user);
+
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode + errorMessage);
+          // ..
+        });
+    } else {
+      //sign in logic
+      signInWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          console.log(user);
+          
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode+errorMessage)
+        });
+    }
+  };
 
   const toggleSignForm = () => {
     setIsSignInForm(!isSignInForm);
