@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import Header from "./Header";
 import bgimg from "../assets/bg.jpg";
-import { checkValidDate } from "../utils/Validate";
+import { checkValidDate } from "../utils/validate.js";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -13,18 +13,19 @@ const Login = () => {
   const name= useRef(null);
 
   const handleButtonClick = () => {
-    // validate the form data
-    const message = checkValidDate({
-      email: email.current.value,
-      password: password.current.value,
-      name: name.current.value,
-    }); 
-    // console.log(email, password);
-    setErrorMessage(message);
+  const message = checkValidDate({
+    email: email.current.value,
+    password: password.current.value,
+    name: isSignInForm ? null : name.current.value,
+  });
 
-    //sign / sign up
+  setErrorMessage(message);
 
-  };
+  if(message) return;
+  
+  //sign / sign up logic
+  
+};
 
   const toggleSignForm = () => {
     setIsSignInForm(!isSignInForm);
