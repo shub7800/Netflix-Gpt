@@ -12,7 +12,12 @@
 - deploying our for production
 - Implement sign in user api 
 - created redux stor with user slice 
-- 
+- bug fix : signup page and user display Name 
+- bugfix: redicrect when login or logout 
+- unsubscribed to the onauthstatechange callback
+- hardcoded value put in constants
+- we take movie data from tmdb
+- get data from now playing movie list 
 
 # Features
 - Login/Sign Up
