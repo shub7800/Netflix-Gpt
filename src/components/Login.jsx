@@ -107,7 +107,7 @@ const Login = () => {
         <img className="absolute" src={bgimg} alt="" />
       </div>
       <form
-        className="absolute w-1/4 p-12 my-36 left-0 right-0 mx-auto bg-black/70 text-white rounded-lg
+        className="absolute w-1/4 p-10 my-36 left-0 right-0 mx-auto bg-black/70 text-white rounded-lg
 "
         action=""
         onSubmit={(e) => e.preventDefault()}
