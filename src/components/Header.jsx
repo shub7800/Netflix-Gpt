@@ -20,7 +20,7 @@ const Header = () => {
         // Sign-out successful.
         
       })
-      .catch((error) => {
+      .catch(() => {
         // An error happened.
         navigate("/error");
       });
@@ -46,7 +46,7 @@ const Header = () => {
       } else {
         // User is signed out
         // ...
-        dispatch(removeUser);
+        dispatch(removeUser());
         navigate("/");
       }
     });

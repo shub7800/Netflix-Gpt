@@ -6,7 +6,7 @@ import movieReducer from "./movieSlice";
     {
         reducer: {
             user: userReducer,
-            movie:movieReducer,
+            movie:movieReducer, 
         }
     }
  )

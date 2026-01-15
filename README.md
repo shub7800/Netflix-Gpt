@@ -10,14 +10,24 @@
 - useRef Hook 
 - firebase setup 
 - deploying our for production
-- Implement sign in user api 
-- created redux stor with user slice 
-- bug fix : signup page and user display Name 
-- bugfix: redicrect when login or logout 
-- unsubscribed to the onauthstatechange callback
-- hardcoded value put in constants
-- we take movie data from tmdb
-- get data from now playing movie list 
+- Implement Sign In user API
+- Created Redux Store with userSlice
+- Implemented Sign out
+- Update Profile
+- BugFix: Sign up user displayName and profile picture update
+- BugFix: if the user is not logged in, redirect /browse
+- Unsubscribed to the onAuthStateChanged callback
+- Add hardcoded values to the constants file
+- Register TMDB API & create an app & get access token
+- Get data from TMDB now playing movies list API
+- Custom hook for Now Playing Movies
+- Create movieSlice
+- Update store with movies data
+- Planning for MainContainer & secondary container
+- Fetch data for Trailer Video
+- Update store with Trailer Video data
+- Embedded the YouTube video and made it autoplay and mute
+- Tailwind CSS to make main container look awesome
 
 # Features
 - Login/Sign Up
