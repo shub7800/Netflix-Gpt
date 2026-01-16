@@ -28,7 +28,16 @@
 - Update store with Trailer Video data
 - Embedded the YouTube video and made it autoplay and mute
 - Tailwind CSS to make main container look awesome
-
+- build secondary components 
+- - Build Movie List component
+- Build Movie Card component
+- Optimized image rendering using CDN URLs
+- Beautiful Browse page using Tailwind CSS
+- Custom hook for Popular Movies
+- GPT Search Page
+- GPT Search Bar
+- Multi-language support (Bonus)
+- 
 # Features
 - Login/Sign Up
     - Sign In /Sign up Form
