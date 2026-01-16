@@ -65,7 +65,10 @@ const Header = () => {
       {user && (
         <div className="flex items-center gap-2 md:gap-3">
           {showGptSearch && (
-            <select className="bg-white p-2 m-2 " onChange={handleLangChange}>
+            <select
+              className="bg-white p-2 m-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              onChange={handleLangChange}
+            >
               {SUPPORTED_LANGUAGES.map((lang) => (
                 <option key={lang.identifier} value={lang.identifier}>
                   {lang.name}
@@ -77,7 +80,7 @@ const Header = () => {
             className="bg-red-500/60 text-white font-bold py-2 px-4 md:py-2.5 md:px-8 lg:py-3 lg:px-6 rounded-lg hover:bg-red-500/40 active:scale-95 transition-all duration-200 flex items-center gap-2 text-sm md:text-base lg:text-lg shadow-xl backdrop-blur-sm hover:shadow-2xl"
             onClick={handleGptSearchClick}
           >
-            {showGptSearch?"HomePage" : "GPT Search"}
+            {showGptSearch ? "HomePage" : "GPT Search"}
           </button>
 
           <img
