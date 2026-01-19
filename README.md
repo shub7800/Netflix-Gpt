@@ -7,7 +7,9 @@ It delivers a modern, responsive, and professional user experience ideal for a p
 
 ## 🌐 Live Preview
 
-👉 *netflix-gpt-chi-peach.vercel.app*
+👉 [netflix-gpt-chi-peach.vercel.app](https://netflix-gpt-chi-peach.vercel.app)
+
+
 
 ---
 
