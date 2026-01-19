@@ -60,13 +60,13 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute w-screen px-4 md:px-8 py-3 md:py-4 bg-gradient-to-b from-black via-black/80 to-transparent z-50 flex justify-between items-center">
-      <img className="w-24 md:w-32 lg:w-36" src={logo} alt="Logo" />
+    <div className="absolute w-screen px-3 sm:px-4 md:px-8 py-2 sm:py-3 md:py-4 bg-gradient-to-b from-black via-black/80 to-transparent z-50 flex justify-between items-center">
+      <img className="w-20 sm:w-24 md:w-32 lg:w-36" src={logo} alt="Logo" />
       {user && (
-        <div className="flex items-center gap-2 md:gap-3">
+        <div className="flex items-center gap-1 sm:gap-2 md:gap-3">
           {showGptSearch && (
             <select
-              className="bg-white p-2 m-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="bg-white p-1.5 sm:p-2 m-1 sm:m-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-xs sm:text-sm md:text-base"
               onChange={handleLangChange}
             >
               {SUPPORTED_LANGUAGES.map((lang) => (
@@ -77,21 +77,21 @@ const Header = () => {
             </select>
           )}
           <button
-            className="bg-red-500/60 text-white font-bold py-2 px-4 md:py-2.5 md:px-8 lg:py-3 lg:px-6 rounded-lg hover:bg-red-500/40 active:scale-95 transition-all duration-200 flex items-center gap-2 text-sm md:text-base lg:text-lg shadow-xl backdrop-blur-sm hover:shadow-2xl"
+            className="bg-red-500/60 text-white font-bold py-1.5 px-3 sm:py-2 sm:px-4 md:py-2.5 md:px-8 lg:py-3 lg:px-6 rounded-lg hover:bg-red-500/40 active:scale-95 transition-all duration-200 flex items-center gap-1 sm:gap-2 text-xs sm:text-sm md:text-base lg:text-lg shadow-xl backdrop-blur-sm hover:shadow-2xl"
             onClick={handleGptSearchClick}
           >
             {showGptSearch ? "HomePage" : "GPT Search"}
           </button>
 
           <img
-            className="w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 rounded-full ring-2 ring-white/30 hover:ring-white/50 transition-all duration-200 object-cover"
+            className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 rounded-full ring-2 ring-white/30 hover:ring-white/50 transition-all duration-200 object-cover"
             src={user?.photoURL}
             alt="User"
           />
 
           <button
             onClick={handleSignOut}
-            className="font-semibold text-white text-sm md:text-base lg:text-lg hover:underline hover:text-red-400 transition-colors duration-200"
+            className="font-semibold text-white text-xs sm:text-sm md:text-base lg:text-lg hover:underline hover:text-red-400 transition-colors duration-200"
           >
             Sign out
           </button>
