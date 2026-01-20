@@ -23,11 +23,11 @@ It delivers a modern, responsive, and professional user experience ideal for a p
 
 ## 📌 Quick Summary (For Recruiters)
 
-* **Frontend:** React.js + Tailwind CSS + Redux Toolkit
+* **Frontend:** React.js + Tailwind CSS + Redux Toolkit.
 * **Backend / API:** TMDB API, Firebase Authentication.
 * **AI Features:** GPT-powered search & recommendations.
 * **Deployment:** Vercel or Firebase Hosting.
-* **Key Highlights:** Responsive UI, Netflix-style Browse, Multi-category movie lists (Now Playing, Popular, Top Rated, Upcoming), AI-powered search
+* **Key Highlights:** Responsive UI, Netflix-style Browse, Multi-category movie lists (Now Playing, Popular, Top Rated, Upcoming), AI-powered search.
 
 ---
 
